@@ -1,0 +1,100 @@
+/* Definición de aspectos principales de div cajas01 */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.secciones_principales{
+	display: grid;
+	grid-template-columns: 15% auto;
+	grid-auto-rows: minmax(90px, auto);
+	max-width: 1350px;
+	height: auto;
+	grid-gap: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f2f2f2;
+}
+
+/* Especificación por secciones en particular*/ 
+.cajas01_A{
+	grid-column: 1/8;
+	grid-area: cajas01_A;
+	font-family: 'Montserrat', sans-serif;
+	font-style: extra bold;
+	font-size: 2em; 
+}
+
+.cajas01_B{
+	padding: 20px;
+	grid-row: 7/8;
+	grid-area: cajas01_B;
+}
+
+.cajas01_C{
+	grid-row: 7/8;
+	grid-area: cajas01_C;
+}
+
+
+/* Orden en página normal panorámica */
+
+@media(min-width: 700px){
+	.secciones_principales{
+		grid-template-areas: 
+		"cajas01_A cajas01_A"
+		"cajas01_B cajas01_C"
+		"cajas01_B cajas01_C";
+	}
+}
+
+@media(max-width: 700px){
+	.secciones_principales{
+		grid-template-rows: (3, 120px);
+		grid-template-areas: 
+		"cajas01_A cajas01_A cajas01_A"
+		"cajas01_C cajas01_C cajas01_C"
+		"cajas01_B cajas01_B cajas01_B";
+	}
+}
+
+.yo {
+	font-family: 'Montserrat', sans-serif;
+	font-style: bold;
+	font-weight: bold;
+	Tex-decoration: none;
+}
+
+.fotografia {
+	font-family: 'Montserrat', sans-serif;
+	font-style: bold;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+.personalt {
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+
+.trabajosf {
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+
+.publicacionesf {
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+
+
+img {
+	max-width: 100%; 
+}
+
+@media ( min-width: 600px ) {
+	.single-entry {
+		width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+    }
+}
